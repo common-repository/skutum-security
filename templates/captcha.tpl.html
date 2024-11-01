@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Security Check</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        html, body {
+            min-height: 100%;
+        }
+        body {
+            background: #fff;
+            color: #666;
+            font: 62.5% "Roboto", "Arial", sans-serif;
+            line-height: 1.4;
+            margin: 0;
+            min-width: 300px;
+            padding: 0;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0;
+        }
+        @-webkit-keyframes preloader-rotate {
+            0% {
+                -webkit-transform:translate(-50%, -50%) rotateZ(0);
+                transform:translate(-50%, -50%) rotateZ(0)
+            }
+
+            100% {
+                -webkit-transform:translate(-50%, -50%) rotateZ(360deg);
+                transform:translate(-50%, -50%) rotateZ(360deg)
+            }
+        }
+
+        @keyframes preloader-rotate {
+            0% {
+                -webkit-transform:translate(-50%, -50%) rotateZ(0);
+                transform:translate(-50%, -50%) rotateZ(0)
+            }
+
+            100% {
+                -webkit-transform:translate(-50%, -50%) rotateZ(360deg);
+                transform:translate(-50%, -50%) rotateZ(360deg)
+            }
+        }
+        .main {
+            background: #f3f3f3;
+            display: block;
+            min-height: 100vh;
+            position: relative;
+        }
+        .main.-loading::after {
+            -webkit-animation:preloader-rotate 0.7s infinite linear;
+            animation:preloader-rotate 0.7s infinite linear;
+            background-image:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%3E%3Cpath%20d%3D%22M15%2030a15%2015%200%201%201%2015-15%2015%2015%200%200%201-15%2015zm0-27.73A12.73%2012.73%200%201%200%2027.73%2015%2012.75%2012.75%200%200%200%2015%202.27z%22%20fill%3D%22%231a1a1a%22%20opacity%3D%22.7%22%2F%3E%3Cpath%20d%3D%22M27.71%2015.48A12.74%2012.74%200%200%201%2015%2027.73V30a15%2015%200%200%200%2015-14.52z%22%20fill%3D%22%23fff%22%20opacity%3D%22.7%22%2F%3E%3C%2Fsvg%3E');
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            content: '';
+            height: 30px;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            width: 30px;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+        }
+        .main.-loading > .inner {
+            opacity: 0;
+        }
+        .inner {
+            padding: 120px 0;
+        }
+        .block {
+            box-sizing: border-box;
+            background: #fff;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 50px 132px;
+            text-align: center;
+        }
+        .h1 {
+            color: #414141;
+            font-size: 4.4em;
+            font-weight: 700;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+        .wrap {
+            margin: 0 auto;
+            max-width: 1280px;
+            padding: 0 8px;
+        }
+        .text {
+            color: #8a8a8a;
+            font-size: 1.6em;
+            line-height: 1.8;
+            margin-bottom: 34px;
+        }
+        .captcha-form {
+            height: 74px;
+            margin: 0 auto;
+            width: 304px;
+        }
+        .captcha-form.extra-margin {
+            margin-top: 130px;
+        }
+        .header-warning {
+            background: #ffd87c;
+            color: #000;
+            text-align: center;
+        }
+        .header-warning > .text {
+            display: inline-block;
+            font-size: 1.5em;
+            padding: 24px 0 24px 48px;
+        }
+        @media (max-width: 800px) {
+            .inner {
+                padding: 80px 0;
+            }
+            .h1 {
+                font-size: 3.2em;
+                line-height: 1.2;
+                margin-bottom: 20px;
+            }
+            .block {
+                padding: 50px 5%;
+            }
+            .text {
+                font-size: 1.4em;
+                line-height: 1.6;
+                margin-bottom: 30px;
+            }
+            .header-warning > .text {
+                font-size: 1.3em;
+                padding: 10px 10px 10px 50px;
+            }
+        }
+        @media (max-width: 400px) {
+            .inner {
+                padding: 40px 0;
+            }
+            .h1 {
+                font-size: 3em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<main class="main" id="main">
+    <div class="inner">
+        <div class="wrap">
+            <div class="block">
+                <h1 class="h1">Security Check</h1>
+                <p class="text">We've detected some suspicious activity coming from your IP address and have temporarily blocked it as a security precaution. <strong>Please check the box to let us know you're human (sorry, no robots allowed).</strong></p>
+                <div class="captcha-form">
+                    <form action="?" method="post" id="captcha-form">
+                        <div class="g-recaptcha" data-sitekey="{%SITE_KEY%}" data-callback="captchaCallback"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="https://www.google.com/recaptcha/api.js?hl=en" async></script>
+<script type="text/javascript" src="https://api.skutum.io/static/wp/js/captcha.js" ></script>
+</body>
+</html>

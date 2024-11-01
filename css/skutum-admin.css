@@ -1,0 +1,460 @@
+#wpcontent{background-color: #F5F6FA !important;}
+.scutum-admin-page h2.btnd-title{
+    margin: 15px 0;
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: -0.114286px;
+    color: #202224;
+}
+.scutum-admin-page .btnd-tatistics__wrapper{
+    background: #fff;
+    display: flex;
+    padding: 29px 24px;
+    flex-flow: row wrap;
+    border-radius: 14px;
+    box-shadow: 6px 6px 54px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+.scutum-admin-page .btnd-dasboard-range-tabs{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+.scutum-admin-page input.btnd-dasboard-tab {
+    display: none;
+}
+.scutum-admin-page .btnd-dasboard-range-tabs label {
+    display: flex;
+    align-items: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    background: #FAFBFD;
+    color: #202224;
+    position: relative;
+    transition: 0.25s background ease;
+    cursor: pointer;
+    padding: 0 16px;
+    border: 0.6px solid #D5D5D5;
+    height: 40px;
+}
+.scutum-admin-page .btnd-dasboard-range-tabs label:not(:first-of-type){
+    border-left: none;
+}
+.scutum-admin-page .btnd-tab--last{
+    border-radius: 0 12px 12px 0;
+}
+.scutum-admin-page .btnd-tab--first{
+    border-radius: 12px 0 0 12px;
+}
+.scutum-admin-page input.btnd-dasboard-tab:checked + label {
+    background: #5A8DFF;
+    color: #fff;
+    border: none;
+}
+.scutum-admin-page .btnd-content-container {
+    background: #fff;
+    position: relative;
+    font-size: 16px;
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.scutum-admin-page .btnd-list{
+    background: #fff;
+    border-radius: 14px;
+    position: relative;
+}
+.scutum-admin-page .btnd-piechart, .scutum-admin-page .btnd-linechart{
+    width: 49%;
+}
+.scutum-admin-page .graph-content{
+    width: 90%;
+    background: #ffffff;
+    margin-top: 40px;
+}
+.scutum-admin-page .btnd-list-content{
+    width: 100%;
+}
+.scutum-admin-page table.btnd-admin-table {
+    background: #ffffff;
+    border-radius: 14px;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px #B9B9B9;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #202224;
+    opacity: 0.9;
+}
+.scutum-admin-page table.btnd-admin-table td, .scutum-admin-page table.btnd-admin-table th {
+    border-bottom: 0.4px solid rgba(151,151,151, .6 );
+}
+.scutum-admin-page table.btnd-admin-table tbody td {
+    padding: 20px 31px;
+}
+.scutum-admin-page table.btnd-admin-table .btnd-admin-table-heading {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+.scutum-admin-page .custom-select-wrapper {
+    position: relative;
+    user-select: none;
+    width: 250px;
+}
+.scutum-admin-page .custom-select {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 0.3px solid #D5D5D5;
+}
+.scutum-admin-page .custom-select__trigger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #202224;
+    line-height: 19px;
+    background: #F9F9FB;
+    cursor: pointer;
+    border: 0.3px solid #D5D5D5;
+}
+.scutum-admin-page .custom-options {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border-top: 0;
+    background: #fff;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+.scutum-admin-page .custom-select.open .custom-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+.scutum-admin-page .custom-option {
+    position: relative;
+    display: block;
+    padding: 16px 24px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #202224;
+    line-height: 19px;
+    cursor: pointer;
+    transition: all 0.5s;
+    border: 0.3px solid #D5D5D5;
+    border-top: 0;
+}
+.scutum-admin-page .custom-option:hover, .custom-option.selected {
+    cursor: pointer;
+    background-color: #5A8DFF;
+    color: #ffffff;
+}
+.scutum-admin-page .custom-select__arrow {
+    position: relative;
+    height: 10px;
+    width: 10px;
+}
+.scutum-admin-page .custom-select__arrow::before, .custom-select__arrow::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0.15rem;
+    height: 100%;
+    transition: all 0.5s;
+}
+.scutum-admin-page .custom-select__arrow::before {
+    left: -2px;
+    transform: rotate(-45deg);
+    background-color: #202224;
+}
+.scutum-admin-page .custom-select__arrow::after {
+    left: 4px;
+    transform: rotate(45deg);
+    background-color: #202224;
+}
+.scutum-admin-page .open .custom-select__arrow::before {
+    left: -2px;
+    transform: rotate(45deg);
+}
+.scutum-admin-page .open .custom-select__arrow::after {
+    left: 4px;
+    transform: rotate(-45deg);
+}
+.scutum-admin-page .skutum-settings{
+    background: #FFFFFF;
+    border: 0.3px solid #B9B9B9;
+    box-sizing: border-box;
+    border-radius: 14px;
+    padding: 29px 24px;
+}
+.scutum-admin-page .skutum-settings__input-wrapper{
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 30px;
+}
+.scutum-admin-page .skutum-settings__label{
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #606060;
+    margin-bottom: 11px;
+}
+
+.scutum-admin-page .skutum-settings__input{
+    width: 360px;
+    background: #F5F6FA;
+    border: 0.6px solid #D5D5D5;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #A6A6A6;
+    padding: 18px 15px;
+}
+
+.scutum-admin-page .skutum-settings__submit_button input{
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: -0.0642857px;
+    color: #FFFFFF;
+    background: #4880FF;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+    border-radius: 12px;
+    padding: 16px 0;
+    width: 274px;
+    height: auto;
+    border: none;
+}
+
+.scutum-admin-page .skutum-settings__submit_button input:hover, .scutum-admin-page .skutum-settings__submit_button input:active, .scutum-admin-page .skutum-settings__submit_button input:focus{
+    color: #FFFFFF;
+    background: #4880FF;
+    border: none;
+}
+
+
+.scutum-admin-page .skutum-settings__submit_button.skutum-test-btn input{
+    color: #FFFFFF;
+    background: #FF8743;
+}
+.scutum-admin-page .skutum-settings__submit_button.skutum-test-btn input:hover, .scutum-admin-page .skutum-settings__submit_button.skutum-test-btn input:active, .scutum-admin-page .skutum-settings__submit_button.skutum-test-btn input:focus{
+    color: #FFFFFF;
+    background: #FF8743;
+    border: none;
+}
+
+.scutum-admin-page .skutum-settings__submit_button .button-primary {
+    text-shadow: none !important;
+}
+.skutum-small-wrappers{
+    display: flex;
+    flex-flow: row wrap;
+}
+.skutum-small__wrapper{
+    background: #fff;
+    display: flex;
+    padding: 29px 24px;
+    flex-flow: column;
+    border-radius: 14px;
+    box-shadow: 6px 6px 54px rgba(0, 0, 0, 0.05);
+    margin-right: 35px;
+    max-width: 240px;
+}
+.skutum-small__wrapper__content{
+    text-align: center;
+}
+.skutum-mode__statistics{
+    background: #e0d4fc;
+    mix-blend-mode: normal;
+    border-radius: 4.5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #6226EF;
+    padding: 8px;
+}
+
+.skutum-mode__learning{
+    background: #ffeddd;
+    mix-blend-mode: normal;
+    border-radius: 4.5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFA756;
+    padding: 8px;
+}
+
+.skutum-mode__incompatible{
+    background: #fcd7d4;
+    mix-blend-mode: normal;
+    border-radius: 4.5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #EF3826;
+    padding: 8px;
+}
+
+.skutum-mode__drop {
+    background: #b0e6d9;
+    mix-blend-mode: normal;
+    border-radius: 4.5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #00B69B;
+    padding: 8px;
+}
+.skutum-small__wrapper__content{
+    font-weight: bold;
+    font-size: 20px;
+}
+.skutum-plugin-update-status{
+    cursor: pointer;
+}
+
+.skutum-switch-input {
+    display: none !important;
+}
+.skutum-switch-label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 500;
+    text-align: left;
+    padding: 16px 0 16px 44px;
+}
+.skutum-switch-label:before, .skutum-switch-label:after {
+    content: "";
+    position: absolute;
+    margin: 0;
+    outline: 0;
+    top: 50%;
+    -ms-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.skutum-switch-label:before {
+    left: 1px;
+    width: 34px;
+    height: 14px;
+    background-color: #9E9E9E;
+    border-radius: 8px;
+}
+.skutum-switch-label:after {
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #FAFAFA;
+    border-radius: 50%;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+}
+
+.skutum-switch-input:checked + .skutum-switch-label:before {
+    background-color: #e9effc;
+}
+.skutum-switch-input:checked + .skutum-switch-label:after {
+    background-color: #4393ff;
+    -ms-transform: translate(80%, -50%);
+    -webkit-transform: translate(80%, -50%);
+    transform: translate(80%, -50%);
+}
+
+.skutum-stats-loader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255,255,255,0.7);
+}
+.skutum-stats-loader-container{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.skutum-spinner {
+    width: 40px;
+    height: 40px;
+    margin: auto auto;
+    background-color: #333;
+    border-radius: 100%;
+    -webkit-animation: skutum-spinner-scaleout 1.0s infinite ease-in-out;
+    animation: skutum-spinner-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes skutum-spinner-scaleout {
+    0% { -webkit-transform: scale(0) }
+    100% {
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+    }
+}
+
+@keyframes skutum-spinner-scaleout {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    } 100% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+          opacity: 0;
+      }
+}
+
+.skutum-warning{
+   font-size: 10px;
+    color: #EF3826;
+}

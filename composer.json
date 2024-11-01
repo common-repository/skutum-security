@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "classmap": [
+            "lib/"
+        ]
+    },
+    "version": "1.0.0",
+    "require": {
+        "rakibtg/sleekdb": "^1.5"
+    }
+}
